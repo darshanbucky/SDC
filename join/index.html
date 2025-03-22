@@ -4,19 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join Us</title>
+    <title>Chathurya | Join Us</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
-    <!-- Mobile Trigger -->
-    <div class="mobile-trigger">
+    <div class="mobile-trigger" style="background-color: #E4E9F7;">
         <i class='bx bx-chevron-right'></i>
     </div>
-
-    <!-- Sidebar Navigation -->
-    <nav class="sidebar">
+    <div class="sidebar">
         <div class="logo-details">
             <i class='bx bx-code-curly icon'></i>
             <div class="logo_name">Club</div>
@@ -30,6 +27,7 @@
                 </a>
                 <span class="tooltip">Home</span>
             </li>
+
             <li>
                 <a href="../events/index.html">
                     <i class='bx bx-calendar-event'></i>
@@ -51,6 +49,7 @@
                 </a>
                 <span class="tooltip">Gallery</span>
             </li>
+
             <li>
                 <a href="../about/index.html">
                     <i class='bx bx-info-square'></i>
@@ -73,8 +72,8 @@
                 <span class="tooltip">Join</span>
             </li>
         </ul>
-    </nav>
-
+    </div>
+    
     <!-- Main Content Container -->
     <div class="container">
         <div class="form_area">
@@ -83,6 +82,10 @@
                 <div class="form_group">
                     <label class="sub_title" for="name">Name</label>
                     <input placeholder="Enter your full name" id="name" class="form_style" type="text">
+                </div>
+                <div class="form_group">
+                    <label class="sub_title" for="id_card">ID Card Number</label>
+                    <input placeholder="Example: 22CA011" id="id_card" class="form_style" type="text">
                 </div>
                 <div class="form_group inline">
                     <div class="class-section">
@@ -113,7 +116,9 @@
                     <label class="sub_title" for="email">Email</label>
                     <input placeholder="Enter your email" id="email" class="form_style" type="email">
                 </div>
-                <button class="btn" type="submit">SIGN UP</button>
+                <div class="form_group">
+                    <button class="btn" type="submit">JOIN -></button>
+                </div>                
             </form>
         </div>
     </div>
