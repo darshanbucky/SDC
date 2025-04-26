@@ -7,6 +7,8 @@
     <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="icon.png">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 
 <body>
@@ -24,6 +26,7 @@
                 </a>
                 <span class="tooltip">Home</span>
             </li>
+            <!--
             <li>
                 <a href="events/index.html">
                     <i class='bx bx-calendar-event'></i>
@@ -45,6 +48,7 @@
                 </a>
                 <span class="tooltip">Gallery</span>
             </li>
+            -->
             <li>
                 <a href="about/index.html">
                     <i class='bx bx-info-square'></i>
@@ -81,6 +85,18 @@
             </div>
         </section>
 
+        <section class="logo-showcase">
+            <div class="logo-card">
+              <div class="logo-image">
+                <img src="icon.png" alt="Chathurya Logo">
+              </div>
+              <div class="logo-content">
+                <h2>The Infinity of Learning</h2>
+                <p>Our logo's infinity symbol represents the boundless possibilities in technology and coding. Just as code can create infinite solutions, Chathurya provides endless opportunities for growth and learning. The bright green color symbolizes innovation, energy and the fresh perspectives our student developers bring to the tech world.</p>
+                <a href="about/index.html" class="learn-more">Learn more about us <i class='bx bx-right-arrow-alt'></i></a>
+              </div>
+            </div>
+          </section>
         <!-- Terminal Section -->
         <div class="container">
             <div class="terminal_toolbar">
@@ -98,7 +114,7 @@
                     <span class="terminal_user">student@devclub:</span>
                     <span class="terminal_location">~</span>
                     <span class="terminal_bling">$</span>
-                    <input type="text" id="terminal-input" autofocus>
+                    <input type="text" id="terminal-input">
                 </div>
             </div>
         </div>
@@ -126,22 +142,65 @@
           <ul class="footer-menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="/about/index.html">About</a></li>
-            <li><a href="/projects/index.html">Projects</a></li>
             <li><a href="/contactus/index.html">Contact</a></li>
+            <li><a href="/join/index.html">Join</a></li>
           </ul>
           <ul class="footer-social-icons">
-            <li><a href="#" title="Twitter"><i class="bx bxl-twitter"></i></a></li>
-            <li><a href="#" title="Discord"><i class="bx bxl-discord"></i></a></li>
-            <li><a href="#" title="Instagram"><i class="bx bxl-instagram"></i></a></li>
-            <li><a href="#" title="LinkedIn"><i class="bx bxl-linkedin"></i></a></li>
-            <li><a href="www.github.com/Chathurya-SDC" title="GitHub"><i class="bx bxl-github"></i></a></li>
+            <!--<li><a href="#" title="Twitter"><i class="bx bxl-twitter"></i></a></li>-->
+            <li><a href="https://discord.gg/YrbbRQmq" title="Discord"><i class="bx bxl-discord"></i></a></li>
+            <li><a href="https://instagram.com/chathuryasdc" title="Instagram"><i class="bx bxl-instagram"></i></a></li>
+            <li><a href="https://www.linkedin.com/company/chathurya-student-developers-club" title="LinkedIn"><i class="bx bxl-linkedin"></i></a></li>
+            <li><a href="https://github.com/Chathurya-SDC" title="GitHub"><i class="bx bxl-github"></i></a></li>
           </ul>
           <p class="footer-copyright">
             &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | Made with 
-            <span class="heart">&hearts;</span> by Chathurya SDC.
+            <span class="heart">&hearts;</span> by Chathurya<span class="infinite">&nbsp;∞</span>
           </p>
         </div>
       </footer>
+      <script>
+        window.addEventListener('load', function () {
+    
+            function launchConfetti() {
+                const count = 1000;
+    
+                const baseOptions = {
+                    ticks: 2000,
+                    gravity: 1,
+                    decay: 0.9,
+                    startVelocity: 10,
+                    colors: ['#4f46e5', '#9333ea', '#ffffff', '#000000']
+                };
+    
+                function fireFromCorner(xOrigin, angleDirection) {
+                    function fire(particleRatio, opts) {
+                        confetti({
+                            ...baseOptions,
+                            origin: { x: xOrigin, y: 1 },
+                            angle: angleDirection, // New: angle controls the direction of spray
+                            ...opts,
+                            particleCount: Math.floor(count * particleRatio)
+                        });
+                    }
+    
+                    // Lower spread for tighter stream, angle directs it toward center
+                    fire(0.3, { spread: 20, startVelocity: 65 });
+                    fire(0.25, { spread: 40 });
+                    fire(0.3, { spread: 60, decay: 0.92, scalar: 1 });
+                    fire(0.1, { spread: 80, startVelocity: 25, scalar: 1.5 });
+                    fire(0.05, { spread: 80, startVelocity: 55 });
+                }
+    
+                // Bottom-left corner shoots toward center-right (angle 60°)
+                fireFromCorner(0, 60);
+    
+                // Bottom-right corner shoots toward center-left (angle 120°)
+                fireFromCorner(1, 120);
+            }
+    
+            setTimeout(launchConfetti, 500);
+        });
+    </script>    
 
     <!-- Scripts -->
     <script src="script.js"></script>

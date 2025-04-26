@@ -246,40 +246,6 @@
         /* Slightly smaller when open on mobile */
     }
 
-    /* Hamburger trigger for mobile */
-    .mobile-trigger {
-        position: fixed;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        background: #11101D;
-        color: white;
-        width: 20px;
-        height: 40px;
-        border-radius: 0 5px 5px 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        z-index: 100;
-        transition: all 0.5s ease;
-    }
-    @media (min-width: 768px) {
-        .mobile-trigger {
-            visibility: hidden;
-        }
-    }
-    
-    @media (max-width: 767px) {
-        .mobile-trigger {
-            visibility: visible;
-        }
-    }
-    
-    .sidebar.open~.mobile-trigger {
-        left: 240px;
-    }
-
     /* Adjust home section for mobile */
     .home-section {
         left: 0 !important;
@@ -535,7 +501,7 @@
 @media (max-width: 480px) {
     .form_area {
         width: 90%;
-        margin: 0 20px;
+        margin: 0 10px;
     }
 
     .form_group {
@@ -546,3 +512,70 @@
         width: 100%;
     }
 }
+
+.chathurya-footer {
+    background-color: #212529;
+    color: #fff;
+    padding: 40px 20px;
+    z-index: 100;
+    text-align: center;
+  }
+  .chathurya-footer .footer-logo {
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  .chathurya-footer .footer-menu {
+    margin: 20px 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  .chathurya-footer .footer-menu li {
+    display: inline-block;
+  }
+  .chathurya-footer .footer-menu li a {
+    color: #fff;
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+  .chathurya-footer .footer-social-icons {
+    margin: 20px 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  .chathurya-footer .footer-social-icons li {
+    display: inline-block;
+  }
+  .chathurya-footer .footer-social-icons a {
+    color: #fff;
+    font-size: 1.5rem;
+    display: inline-block;
+    padding: 10px;
+    background-color: #495057;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  .chathurya-footer .footer-social-icons a:hover {
+    background-color: #6c757d;
+    transform: scale(1.1);
+  }
+  .chathurya-footer .footer-copyright {
+    font-size: 0.85rem;
+    margin-top: 20px;
+    color: #ced4da;
+  }
+  .chathurya-footer .heart {
+    color: red;
+  }
+  
+  .chathurya-footer .infinite {
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
+    font-size: 1rem;
+    color: chartreuse;
+  }
